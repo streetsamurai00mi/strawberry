@@ -296,8 +296,8 @@ void QobuzService::SendLoginWithCredentials(const QString &app_id, const QString
   timer_login_attempt_->start();
 
   const ParamList params = ParamList() << Param("app_id", app_id)
-                                       << Param("username", username)
-                                       << Param("password", password)
+                                       << Param("user_id", username)
+                                       << Param("user_auth_token", password)
                                        << Param("device_manufacturer_id", Utilities::MacAddress());
 
   QUrlQuery url_query;
